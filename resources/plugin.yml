@@ -1,0 +1,39 @@
+name: SimpleFAQ
+main: com.infermc.simplefaq.SimpleFAQ
+author: Thomas Edwards (MajesticFudgie)
+version: 1.1
+description: SimpleFAQ, Providing a simple in game FAQ System.
+commands:
+   faq:
+      description: Returns some help text regarding the topic you request.
+      usage: "Usage: /faq [topic]"
+   bfaq:
+      description: Broadcasts help text regarding the topic you request.
+      usage: "Usage: /bfaq [topic]"
+   addfaq:
+      description: Adds a FAQ topic
+      usage: "Usage: /addfaq (topic) (content of topic)"
+   removefaq:
+      description: Removes a FAQ topic
+      usage: "Usage: /removefaq (topic) (content of topic)"
+   reloadfaq:
+      description: Reloads FAQ topics from topics.yml
+      usage: "Usage: /reloadfaq"
+permissions:
+  simplefaq.*:
+      children:
+         simplefaq.faq:
+            description: Allows access to /faq
+            default: true
+         simplefaq.broadcast:
+            description: Allows access to /bfaq to broadcast topics.
+            default: op
+         simplefaq.add:
+            description: Allows access to /addfaq to add a topic.
+            default: op
+         simplefaq.remove:
+            description: Allows access to /removefaq to remove a topic.
+            default: op
+         simplefaq.reload:
+            description: Allows access to /reloadfaq to reload topics from disk.
+            default: op
