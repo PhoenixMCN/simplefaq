@@ -57,7 +57,9 @@ public class SimpleFAQ extends JavaPlugin implements Listener {
                     for (String key : topics.keySet()) {
                         topicList.add(key.toLowerCase());
                     }
-                    sender.sendMessage(format("&bKnown topics: "+joinStrings(", ",(String[]) topicList.toArray())));
+                    String[] topics = new String[topicList.size()];
+                    topics = topicList.toArray(topics);
+                    sender.sendMessage(format("&bKnown topics: "+joinStrings(", ",topics)));
                 }
             } else {
                 sender.sendMessage(format("&cNo permissions!"));
@@ -77,7 +79,9 @@ public class SimpleFAQ extends JavaPlugin implements Listener {
                     for (String key : topics.keySet()) {
                         topicList.add(key.toLowerCase());
                     }
-                    sender.sendMessage(format("&bKnown topics: "+joinStrings(", ",(String[]) topicList.toArray())));
+                    String[] topics = new String[topicList.size()];
+                    topics = topicList.toArray(topics);
+                    sender.sendMessage(format("&bKnown topics: "+joinStrings(", ", topics)));
                 }
             } else {
                 sender.sendMessage(format("&cNo permissions!"));

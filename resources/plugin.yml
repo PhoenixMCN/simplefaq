@@ -1,7 +1,8 @@
 name: SimpleFAQ
 main: com.infermc.simplefaq.SimpleFAQ
-author: Thomas Edwards (MajesticFudgie)
-version: 1.1
+author: Thomas Burnett-Taylor (MajesticFudgie)
+api-version: 1.18
+version: 1.2
 description: SimpleFAQ, Providing a simple in game FAQ System.
 commands:
    faq:
